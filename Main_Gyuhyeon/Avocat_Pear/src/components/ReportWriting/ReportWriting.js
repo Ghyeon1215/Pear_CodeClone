@@ -54,9 +54,9 @@ const ReportWriting = () => {
                         </S.AttachFile>
                     </S.ReportMain>
                     {/* 팀 제작 ~ submit btn */}
-                    <div>
+                    <S.SubmitBox>
                         {/* 팀 제작 (left) */}
-                        <div>
+                        <S.MakeTeam>
                             {/* add teamName */}
                             <div>
                                 <span className="add-teamName">
@@ -78,9 +78,9 @@ const ReportWriting = () => {
                                     </form>
                                 </span>
                             </div>
-                        </div>
+                        </S.MakeTeam>
                         {/* save & submit btn (right) */}
-                        <div>
+                        <S.SaveSubBtn>
                             <div>
                                 <span className="btn save-btn"><button>임시저장</button></span>
                             </div>
@@ -91,8 +91,8 @@ const ReportWriting = () => {
                                     </form>
                                 </span>
                             </div>
-                        </div>
-                    </div>
+                        </S.SaveSubBtn>
+                    </S.SubmitBox>
                </S.InlineBox>
             </S.BorderBox>
         </S.Main>

@@ -173,6 +173,20 @@ const AttachFile = styled.div`
     }
 `;
 
+const SubmitBox = styled.div`
+    width:100%;
+    display: flex;
+`;
+    
+
+const MakeTeam = styled.div`
+    
+`;
+
+const SaveSubBtn = styled.div`
+    
+`;
+
 export {
     Main,
     BorderBox,
@@ -186,5 +200,7 @@ export {
     ReprotWriteBox,
     LinkBox,
     AttachFile,
-
+    SubmitBox,
+    MakeTeam,
+    SaveSubBtn
 }
