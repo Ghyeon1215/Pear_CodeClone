@@ -180,11 +180,23 @@ const SubmitBox = styled.div`
     
 
 const MakeTeam = styled.div`
-    
+    width: 70%;
+    height: 145px;
+    border: 1px solid;
+
+    form {
+        width:100%;
+        display:flex;
+        justify-content: space-around;
+        align-items: center;
+    }
 `;
 
 const SaveSubBtn = styled.div`
-    
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
 `;
 
 export {

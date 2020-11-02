@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import * as S from '../styled/ReportWriting/style';
+// In의 약자 I
+import * as I from '../styled/ReportWriting/InStyle'; 
 import { RWlogo } from "../../assets";
 import { search } from "../../assets";
 import { select } from "../../assets";
@@ -58,39 +60,37 @@ const ReportWriting = () => {
                         {/* 팀 제작 (left) */}
                         <S.MakeTeam>
                             {/* add teamName */}
-                            <div>
-                                <span className="add-teamName">
-                                    <form name="teamName" action="" method="post" autoComplete="on">
-                                        <input type={Text} placeholder="팀의 이름을 입력해주세요." />
-                                        <button type="submit" name="확인" value="확인">확인</button> 
-                                    </form>
-                                </span>
-                            </div>
-                            {/* add member */}
-                            <div>
-                                <span className="add-teamMember"><input type={Text} placeholder="팀원을 입력해주세요." /></span>
-                            </div>
-                            {/* make team btn */}
-                            <div>
-                                <span>
-                                    <form name="makeTeam" action="" method="post" autoComplete="on">
+                            <form name="makeTeam" action="" method="post" autoComplete="on">
+                                <I.TeamLeftBox>
+                                    <I.TeamName>
+                                        <span>
+                                            <input type={Text} placeholder="팀의 이름을 입력해주세요." />
+                                        </span>
+                                    </I.TeamName>
+                                    {/* add member */}
+                                    <I.TeamMember>
+                                        <span><input type={Text} placeholder="팀원을 입력해주세요." /></span>
+                                    </I.TeamMember>
+                                </I.TeamLeftBox>
+                                <I.TeamRightBox>
+                                    <div>
                                         <button type="submit">팀 만들기</button>
-                                    </form>
-                                </span>
-                            </div>
+                                    </div>
+                                </I.TeamRightBox>
+                            </form>
                         </S.MakeTeam>
                         {/* save & submit btn (right) */}
                         <S.SaveSubBtn>
-                            <div>
+                            <I.SaveBtn>
                                 <span className="btn save-btn"><button>임시저장</button></span>
-                            </div>
-                            <div>
+                            </I.SaveBtn>
+                            <I.SubBtn>
                                 <span className="btn submit-btn">
                                     <form name="reportSubmit" action="" method="post" autoComplete="on">
                                         <button type="submit">제출하기</button>
                                     </form>
                                 </span>
-                            </div>
+                            </I.SubBtn>
                         </S.SaveSubBtn>
                     </S.SubmitBox>
                </S.InlineBox>
