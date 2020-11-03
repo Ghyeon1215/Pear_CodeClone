@@ -39,6 +39,7 @@ const ReportLogo = styled.div`
 
     span {
         width:30%;
+        padding: 0 .6rem;
     }
     img {
         width: 10rem;
@@ -130,7 +131,7 @@ const LinkBox = styled.div`
         width: 100%;
         height: 100%;
     }
-    form {
+    span > form {
         display: flex;
         justify-content: flex-start;
         align-items: center;
@@ -139,17 +140,17 @@ const LinkBox = styled.div`
         border: 1px solid #F8F8F8;
         padding: .4rem .4rem;
     }
-    img {
+    form > img {
         width: 20px; 
     }
-    input {
+    form > input {
         width: 100%;
         border: none;
         outline: none;
         background: #F8F8F8;
         margin-left: .4rem;
         font-family: BBTreeGR;
-        font-size: 14px;
+        font-size: 13px;
     }
 `;
 
@@ -176,6 +177,7 @@ const AttachFile = styled.div`
 const SubmitBox = styled.div`
     width:100%;
     display: flex;
+    margin-top: .8rem;
 `;
     
 
@@ -186,9 +188,9 @@ const MakeTeam = styled.div`
 
     form {
         width:100%;
-        display:flex;
-        justify-content: space-around;
-        align-items: center;
+        height: 100%;
+        display: flex;
+        
     }
 `;
 
