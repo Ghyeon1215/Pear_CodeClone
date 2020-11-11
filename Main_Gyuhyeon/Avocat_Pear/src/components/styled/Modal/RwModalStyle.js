@@ -1,72 +1,72 @@
 import styled from "styled-components";
 
-const Main = styled.div`
+const BorderInput = styled.div`
+    width: 100%;
+
+    form > span {
+        width: 100%;
+        display: flex;
+        justify-content: left;
+        align-items: center;
+    }
+    span > input {
+        width: 90%;    
+        border: none;
+        border-radius: 20px;
+        background-color: #ffffff;
+        outline: none;
+        padding: .5rem 1rem;
+        font-size: 16px;
+        font-family: BBTreeGR;
+    }
+    span > img {
+        width: 14px;
+    }
+`;
+
+const BorderResult = styled.div`
+    width: 90%;
+    height: 12%;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    background-color: gray;
-
-    * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-    }
-`;
-
-const ModalMain = styled.div`
-    z-index: 5;
-    width: 350px;
-    height: 450px;
+    margin: 0 0 .4rem .8rem;
     border: 1px solid #ffffff;
-    border-radius: 20px;
-    background-color: #ffffff;
-`;
-
-const ModalSort = styled.div`
-    width: 100%;
-    height: 100%;
-    padding: 1rem 1rem;
-`;
-
-const CloseBtn = styled.div`
-    width: 100%;
-    display: flex;
-    justify-content: flex-end;
-
-    span > img {
-        width: 13px;
-    }
-    span > img:hover {
-        cursor: pointer;
-    }
-`;
-
-const SearchInput = styled.div`
-    border: 2px solid #e4eef2;
-    border-radius: 20px;
-    background-color: #ffffff;
-    margin: .5rem 1rem;
-`;
-
-const SearchResult = styled.div`
-    margin: 1.5rem 1rem 0;
-    border: 1px solid #e4eef2;
     border-radius: 7px;
-    background-color: #e4eef2;
+    background-color: #ffffff;
+
+    div {
+        font-size: 13px;
+        font-family: BBTreeGL;
+    }
+
+    form > div {
+        display: flex;
+        align-items: center;
+    }
+
+    div > span {
+        margin-right: .6rem;
+    }
+
+    div > input {
+        margin-left: .6rem;
+    }
 `;
 
-const TeamState = styled.div`
-
+const BorderState = styled.div`
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    font-family: BBTreeGL;
+    font-weight: 600;
+        img {
+            margin-left: 1rem;
+        }
 `;
-
 
 export {
-    Main,
-    ModalMain,
-    ModalSort,
-    CloseBtn,
-    SearchInput,
-    SearchResult,
-    TeamState,
+    BorderInput,
+    BorderResult,
+    BorderState
 }
