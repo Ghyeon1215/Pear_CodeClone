@@ -1,72 +1,103 @@
 import styled from "styled-components";
 
-const BorderInput = styled.div`
-    width: 100%;
-
-    form > span {
-        width: 100%;
-        display: flex;
-        justify-content: left;
-        align-items: center;
-    }
-    span > input {
-        width: 90%;    
-        border: none;
-        border-radius: 20px;
-        background-color: #ffffff;
-        outline: none;
-        padding: .5rem 1rem;
-        font-size: 16px;
-        font-family: BBTreeGR;
-    }
-    span > img {
-        width: 14px;
-    }
-`;
-
-const BorderResult = styled.div`
-    width: 90%;
-    height: 12%;
+const Main = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 0 0 .4rem .8rem;
+    height: 100vh;
+    background-color: gray;
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+`;
+
+const ModalMain = styled.div`
+    z-index: 5;
+    width: 350px;
+    height: 450px;
     border: 1px solid #ffffff;
-    border-radius: 7px;
+    border-radius: 20px;
     background-color: #ffffff;
-
-    div {
-        font-size: 13px;
-        font-family: BBTreeGL;
-    }
-
-    form > div {
-        display: flex;
-        align-items: center;
-    }
-
-    div > span {
-        margin-right: .6rem;
-    }
-
-    div > input {
-        margin-left: .6rem;
-    }
 `;
 
-const BorderState = styled.div`
+const ModalSort = styled.div`
+    width: 100%;
+    height: 100%;
+    padding: 1rem 1rem;
+`;
+
+const CloseBtn = styled.div`
+    width: 100%;
     display: flex;
-    align-items: center;
-    font-size: 14px;
-    font-family: BBTreeGL;
-    font-weight: 600;
-        img {
-            margin-left: 1rem;
-        }
+    justify-content: flex-end;
+
+    span > img {
+        width: 13px;
+    }
+    span > img:hover {
+        cursor: pointer;
+    }
 `;
+
+const SearchInput = styled.div`
+    border: 2px solid #e4eef2;
+    border-radius: 20px;
+    background-color: #ffffff;
+    margin: .5rem 1rem;
+`;
+
+const SearchResult = styled.div`
+    height: 72%;
+    max-height: 72%;
+    margin: 1.5rem 1rem 0;
+    padding: .8rem 0;
+    border: 1px solid #e4eef2;
+    border-radius: 7px;
+    background-color: #e4eef2;
+    overflow-y: scroll;
+
+    &::-webkit-scrollbar { 
+        width: 20px; 
+        /* 스크롤바의 width */
+    }
+
+    &::-webkit-scrollbar-thumb { 
+        background: #5955d8;
+        border-radius: 10px;
+        background-clip: padding-box;
+        border: 7.5px solid transparent;
+        /* 스크롤바 색 */
+    }
+
+    &::-webkit-scrollbar-track {
+        background-color: #e4eef2; 
+        margin: .4rem;
+        border-radius: 10px;
+        /* 스크롤바의 전체 */
+    }
+`;
+
+const TeamState = styled.div`
+    display: flex;
+    justify-content: flex-end;
+    margin: 1rem 1rem;
+    padding: 0 .2rem;
+
+    &:hover {
+        cursor: pointer;
+    }
+`;
+
 
 export {
-    BorderInput,
-    BorderResult,
-    BorderState
+    Main,
+    ModalMain,
+    ModalSort,
+    CloseBtn,
+    SearchInput,
+    SearchResult,
+    TeamState,
 }
