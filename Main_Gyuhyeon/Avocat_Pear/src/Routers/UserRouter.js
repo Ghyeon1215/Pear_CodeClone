@@ -4,7 +4,8 @@ import GlobalFonts from "../GlobalStyle";
 import {
   ReportWriting,
   ReportWritingModal,
-  TeamStateModal
+  TeamStateModal,
+  SubmitSuccess
 } from "../Components/index";
 
 function UserRouter() {
@@ -15,6 +16,7 @@ function UserRouter() {
         <Route path="/report-writing" component={ReportWriting} exact />
         <Route path="/report-writing-modal" component={ReportWritingModal} exact />
         <Route path="/team-state-modal" component={TeamStateModal} exact />
+        <Route path="/submit-success-modal" component={SubmitSuccess} exact />
       </Switch>
     </>
   );
