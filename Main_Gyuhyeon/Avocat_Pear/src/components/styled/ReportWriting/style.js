@@ -11,6 +11,18 @@ const Main = styled.div`
     background-image: url(${MainBackground});
     background-size: 100vw 100vh;
     background-repeat: no-repeat;
+    overflow-y: scroll;
+
+    &::-webkit-scrollbar { 
+        width: 10px; 
+        /* 스크롤바의 width */
+    }
+
+    &::-webkit-scrollbar-thumb { 
+        background: linear-gradient(135deg,#81bcff,#56D4E2);
+        border-radius: 10px;
+        /* 스크롤바 색 */
+    }
 
     * {
         box-sizing: border-box;
@@ -23,32 +35,12 @@ const BorderBox = styled.div`
     background-color: #ffffff;
     border: 1px solid #4d4d4d;
     width: 68%;
-    min-width: 1045px;
+    min-width: 950px;
     max-width: 68%;
-    height: 78%;
-    max-height: 78%;
-    margin-top: 5rem;
+    height: 85%;
+    max-height: 100%;
+    margin: 10rem 0 4rem;
     padding: 1.5rem 2.5rem 0;
-    overflow-y: scroll;
-
-    &::-webkit-scrollbar { 
-        width: 20px; 
-        /* 스크롤바의 width */
-    }
-
-    &::-webkit-scrollbar-thumb { 
-        background: linear-gradient(135deg,#81bcff,#56D4E2);
-        border-radius: 10px;
-        background-clip: padding-box;
-        border: 6.5px solid transparent;
-        /* 스크롤바 색 */
-    }
-
-    &::-webkit-scrollbar-track {
-        margin: .4rem;
-        border-radius: 10px;
-        /* 스크롤바의 전체 */
-    }
 `;
 
 const InlineBox = styled.div`
@@ -89,7 +81,7 @@ const Select = styled.div`
     border: 1px solid #4d4d4d;
     background: #ffffff;
     padding: .2rem .3rem;
-    font-family: BBTreeGR;
+    font-family: BBTreeGL;
     margin-left: 1.5rem;
 
     span {
@@ -106,7 +98,7 @@ const Select = styled.div`
 const ViewList = styled.div`
     position: absolute;
     min-width: 90px;
-    height: 81px;
+    min-height: 81px;
     background-color: #ffffff;
     border: 1px solid #4d4d4d;
     border-top: none;
@@ -116,7 +108,7 @@ const ViewList = styled.div`
     z-index: 5;
     margin: 4px 10px 0 0;
     left: -1px;
-    padding: 8px 8px 0;
+    padding: 8px .3rem 0;
 `;
 
 const ReportMain = styled.div`
@@ -133,8 +125,9 @@ const ReportHeader = styled.div`
         border: 1px solid #F8F8F8;
         outline: none;
         padding: .8rem .8rem;
-        font-family: BBTreeGB;
-        font-size: 15px;
+        font-family: BBTreeGL;
+        font-weight: normal;
+        font-size: 14px;
         text-align: left;
     }
 `;
@@ -151,7 +144,7 @@ const ReprotWriteBox = styled.div`
         outline: none;
         padding: .8rem .8rem;
         font-family: BBTreeGL;
-        font-size: 13px;
+        font-size: 14px;
         text-align: left;
     }
 `;
@@ -188,7 +181,7 @@ const LinkBox = styled.div`
         margin-left: .4rem;
         font-family: BBTreeGL;
         font-size: 13px;
-        font-weight: bold;
+        
     }
 `;
 
@@ -230,7 +223,6 @@ const MakeTeam = styled.div`
         width:100%;
         height: 100%;
         display: flex;
-        
     }
 `;
 
