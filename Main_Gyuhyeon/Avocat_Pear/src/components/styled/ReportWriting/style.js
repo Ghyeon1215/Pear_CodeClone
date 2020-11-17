@@ -6,6 +6,8 @@ const Main = styled.div`
     justify-content: center;
     align-items: center;
     height: 100vh;
+    width: 100%;
+    min-width: 1045px;
     background-image: url(${MainBackground});
     background-size: 100vw 100vh;
     background-repeat: no-repeat;
@@ -21,30 +23,31 @@ const BorderBox = styled.div`
     background-color: #ffffff;
     border: 1px solid #4d4d4d;
     width: 68%;
+    min-width: 1045px;
     max-width: 68%;
-    height: 80%;
-    max-height: 80%;
+    height: 78%;
+    max-height: 78%;
     margin-top: 5rem;
     padding: 1.5rem 2.5rem 0;
     overflow-y: scroll;
 
     &::-webkit-scrollbar { 
-        width: 10px; 
+        width: 20px; 
         /* 스크롤바의 width */
     }
 
-    &::-webkit-scrollbar-track {
-        background-color: #f0f0f0; 
-        /* 스크롤바의 전체 */
-    }
     &::-webkit-scrollbar-thumb { 
         background: linear-gradient(135deg,#81bcff,#56D4E2);
         border-radius: 10px;
+        background-clip: padding-box;
+        border: 6.5px solid transparent;
         /* 스크롤바 색 */
     }
-    &::-webkit-scrollbar-thumb:hover {
-        width: 20px;
-        
+
+    &::-webkit-scrollbar-track {
+        margin: .4rem;
+        border-radius: 10px;
+        /* 스크롤바의 전체 */
     }
 `;
 
@@ -81,18 +84,14 @@ const PaddingBox = styled.div`
 `;
 
 const Select = styled.div`
-    width: 5.5rem;
+    position: relative;
+    width: 90px;
     border: 1px solid #4d4d4d;
     background: #ffffff;
     padding: .2rem .3rem;
-    font-family: BBTreeGL;
+    font-family: BBTreeGR;
     margin-left: 1.5rem;
-    div {
-        width: 100%;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
+
     span {
         font-size: 13px;
     }
@@ -102,6 +101,22 @@ const Select = styled.div`
     &:hover {
         cursor: pointer;
     }
+`;
+
+const ViewList = styled.div`
+    position: absolute;
+    min-width: 90px;
+    height: 81px;
+    background-color: #ffffff;
+    border: 1px solid #4d4d4d;
+    border-top: none;
+    box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
+    text-align: left;
+    cursor: pointer;
+    z-index: 5;
+    margin: 4px 10px 0 0;
+    left: -1px;
+    padding: 8px 8px 0;
 `;
 
 const ReportMain = styled.div`
@@ -171,8 +186,9 @@ const LinkBox = styled.div`
         outline: none;
         background: #F8F8F8;
         margin-left: .4rem;
-        font-family: BBTreeGB;
+        font-family: BBTreeGL;
         font-size: 13px;
+        font-weight: bold;
     }
 `;
 
@@ -195,15 +211,6 @@ const AttachFile = styled.div`
         img {
             width: 20px;
         }
-    }
-    span > input {
-        width: 100%;
-        border: none;
-        outline: none;
-        background: #F8F8F8;
-        margin-left: .5rem;
-        font-family: BBTreeGB;
-        font-size: 13px;
     }
 `;
 
@@ -242,6 +249,7 @@ export {
     SelectBoxs,
     PaddingBox,
     Select,
+    ViewList,
     ReportMain,
     ReportHeader,
     ReprotWriteBox,
