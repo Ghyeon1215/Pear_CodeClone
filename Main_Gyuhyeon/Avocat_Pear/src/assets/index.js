@@ -5,3 +5,6 @@ export { default as search } from './search.svg';
 export { default as select } from './select.svg';
 export { default as link } from './link.svg';
 export { default as searchImg } from './searchImg.png';
+export { default as selecthover} from './SelectHover.svg';
+export { default as Close} from './Close.svg';
+export { default as NowTeam} from './NowTeam.svg';
