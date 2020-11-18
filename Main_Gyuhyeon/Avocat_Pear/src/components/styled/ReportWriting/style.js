@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { } from "styled-components";
 import { MainBackground } from "../../../assets";
 
 const Main = styled.div`
@@ -8,6 +8,7 @@ const Main = styled.div`
     height: 100vh;
     width: 100%;
     min-width: 1045px;
+    min-height: 650px;
     background-image: url(${MainBackground});
     background-size: 100vw 100vh;
     background-repeat: no-repeat;
@@ -38,6 +39,7 @@ const BorderBox = styled.div`
     min-width: 950px;
     max-width: 68%;
     height: 85%;
+    min-height: 620px;
     max-height: 100%;
     margin: 10rem 0 4rem;
     padding: 1.5rem 2.5rem 0;
@@ -93,12 +95,20 @@ const Select = styled.div`
     &:hover {
         cursor: pointer;
     }
+    &:hover > div ~ div {
+        visibility: visible;
+        height: 81px;
+    }
+    & > div ~ div {
+        visibility: hidden;
+        height: 0px;
+    }
 `;
 
 const ViewList = styled.div`
     position: absolute;
     min-width: 90px;
-    min-height: 81px;
+    transition: all 0.3s;
     background-color: #ffffff;
     border: 1px solid #4d4d4d;
     border-top: none;
@@ -106,9 +116,9 @@ const ViewList = styled.div`
     text-align: left;
     cursor: pointer;
     z-index: 5;
-    margin: 4px 10px 0 0;
+    margin: 4.5px 10px 0 0;
     left: -1px;
-    padding: 8px .3rem 0;
+    overflow: hidden;
 `;
 
 const ReportMain = styled.div`
