@@ -5,20 +5,18 @@ import * as I from '../styled/ReportWriting/InStyle';
 import { RWlogo } from "../../assets";
 import { searchImg } from "../../assets";
 import { select } from "../../assets";
+import { selecthover } from "../../assets";
 import { link } from "../../assets";
 
 const ReportWriting = () => {
-    const [ list, setList ] = useState(0);
+    const [hoverNumber, setHoverNumber] = useState(0)
 
-    const onListtUp = (e) => {
-        console.log(e.target);
-        setList(Number(e.currentTarget.dataset.id))
+    const onMouseOver = (e) => {
+        setHoverNumber(Number(e.currentTarget.dataset.id))
     }
-
-    const onListtDown = () => {
-        setList(0);
+    const onMouseLeave = () => {
+        setHoverNumber(0)
     }
-    
     return (
         <S.Main>
             {/* margin 맥여주는 div */}
@@ -38,38 +36,39 @@ const ReportWriting = () => {
                             <S.Select>
                                 <div><span>팀 선택</span><img src={select} alt="team-select" /></div>
                             </S.Select>*/ }
-                            <S.Select data-id="1" onMouseOver={onListtUp} onMouseLeave={onListtDown}>
-                                <I.SelctFlexBox><span>구분 선택</span><img src={select} alt="language"/></I.SelctFlexBox>
-                                {
-                                    list === 1 &&
+                            <S.Select data-id="1" onMouseOver={onMouseOver} onMouseLeave={onMouseLeave}>
+                            { 
+                                hoverNumber === 1 ?
+                                <I.SelctFlexBox><span>구분 선택</span><img src={selecthover} style={{width:'11px'}} alt="language"/></I.SelctFlexBox>
+                                : <I.SelctFlexBox><span>구분 선택</span><img src={select} alt="language"/></I.SelctFlexBox>
+                            }
                                     <S.ViewList>
                                         <I.ListTable>개인</I.ListTable>
                                         <I.ListTable>팀</I.ListTable>
                                         <I.ListTable>비공개</I.ListTable>
                                     </S.ViewList>
-                                }
                             </S.Select>
-                            <S.Select data-id="2" onMouseOver={onListtUp} onMouseLeave={onListtDown}>
-                                <I.SelctFlexBox><span>개발 분야</span><img src={select} alt="major"/></I.SelctFlexBox>
-                                {
-                                    list === 2 &&
-                                    <S.ViewList>
+                            <S.Select data-id="2" onMouseOver={onMouseOver} onMouseLeave={onMouseLeave}>
+                            { 
+                                hoverNumber === 2 ?
+                                <I.SelctFlexBox><span>구분 선택</span><img src={selecthover} style={{width:'11px'}} alt="language"/></I.SelctFlexBox>
+                                : <I.SelctFlexBox><span>구분 선택</span><img src={select} alt="language"/></I.SelctFlexBox>
+                            }                                    <S.ViewList>
                                         <I.ListTable>소프트웨어</I.ListTable>
                                         <I.ListTable>인베디드</I.ListTable>
                                         <I.ListTable>정보보안</I.ListTable>
                                     </S.ViewList>
-                                }
                             </S.Select>
-                            <S.Select data-id="3" onMouseOver={onListtUp} onMouseLeave={onListtDown}>
-                                <I.SelctFlexBox><span>공개 범위</span><img src={select} alt="scope"/></I.SelctFlexBox>
-                                {
-                                    list === 3 &&
-                                    <S.ViewList>
+                            <S.Select data-id="3" onMouseOver={onMouseOver} onMouseLeave={onMouseLeave}>
+                            { 
+                                hoverNumber === 3 ?
+                                <I.SelctFlexBox><span>구분 선택</span><img src={selecthover} style={{width:'11px'}} alt="language"/></I.SelctFlexBox>
+                                : <I.SelctFlexBox><span>구분 선택</span><img src={select} alt="language"/></I.SelctFlexBox>
+                            }                                    <S.ViewList>
                                         <I.ListTable>전체 공개</I.ListTable>
                                         <I.ListTable>학생 공개</I.ListTable>
                                         <I.ListTable>비공개</I.ListTable>
                                     </S.ViewList>
-                                }
                             </S.Select>
                         </S.PaddingBox>
                     </S.SelectBoxs>
