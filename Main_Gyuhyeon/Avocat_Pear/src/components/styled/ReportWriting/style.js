@@ -42,7 +42,7 @@ const BorderBox = styled.div`
     min-height: 730px;
     max-height: 100%;
     margin: 15rem 0 3rem;
-    padding: 1.5rem 2.5rem 0;
+    padding: 2rem 2.5rem 0;
 `;
 
 const InlineBox = styled.div`
@@ -115,7 +115,7 @@ const ViewList = styled.div`
     box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
     text-align: left;
     cursor: pointer;
-    z-index: 5;
+    z-index: 1;
     margin: 4.5px 10px 0 0;
     left: -1px;
     overflow: hidden;
@@ -171,7 +171,7 @@ const LinkBox = styled.div`
         width: 100%;
         height: 100%;
     }
-    span > form {
+    span > div {
         display: flex;
         justify-content: flex-start;
         align-items: center;
@@ -180,10 +180,10 @@ const LinkBox = styled.div`
         border: 1px solid #F8F8F8;
         padding: .4rem .4rem;
     }
-    form > img {
+    div > img {
         width: 20px; 
     }
-    form > input {
+    div > input {
         width: 100%;
         border: none;
         outline: none;
@@ -229,7 +229,7 @@ const MakeTeam = styled.div`
     height: 145px;
     border: 1px solid;
 
-    form {
+    span {
         width:100%;
         height: 100%;
         display: flex;
