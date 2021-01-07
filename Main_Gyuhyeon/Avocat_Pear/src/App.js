@@ -3,8 +3,7 @@ import { BrowserRouter, Route } from "react-router-dom";
 import GlobalFonts from "./GlobalStyle";
 import UserRouter from "./Routers/UserRouter";
 
-
-function App() {
+const App = () => {
   return (
     <>
       <GlobalFonts />
@@ -13,6 +12,6 @@ function App() {
       </BrowserRouter>
     </>
   );
-}
+};
 
 export default App;
