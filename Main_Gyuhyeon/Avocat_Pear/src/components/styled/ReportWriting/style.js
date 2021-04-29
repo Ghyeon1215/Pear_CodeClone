@@ -10,20 +10,16 @@ export const Main = styled.div`
   min-width: 1045px;
   min-height: 650px;
   background-image: url(${MainBackground});
-  background-size: 100vw 100vh;
+  background-size: cover;
   background-repeat: no-repeat;
   overflow-y: scroll;
+  overflow-x: none;
   &::-webkit-scrollbar {
     width: 10px;
     /* 스크롤바의 width */
   }
-  &:hover {
-    cursor: default;
-  }
   * {
     box-sizing: border-box;
-    margin: 0;
-    padding: 0;
   }
 `;
 
@@ -38,19 +34,16 @@ export const BorderBox = styled.div`
   max-height: 100%;
   margin: 15rem 0 3rem;
   padding: 2rem 2.5rem 0;
-
-  &:hover {
-    cursor: default;
-  }
 `;
 
 export const InlineBox = styled.div`
   width: 100%;
   height: 100%;
+`;
 
-  &:hover {
-    cursor: default;
-  }
+export const ReportHeader = styled.div`
+  width: 100%;
+  height: 10%;
 `;
 
 export const ReportLogo = styled.div`
@@ -129,20 +122,48 @@ export const ViewList = styled.div`
   text-align: left;
   cursor: pointer;
   z-index: 1;
-  margin: 4.5px 10px 0 0;
+  margin: 4px 10px 0 0;
   left: -1px;
   overflow: hidden;
 `;
 
-export const ReportMain = styled.div`
-  margin-top: 0.8rem;
-
+export const SelctFlexBox = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   &:hover {
     cursor: default;
   }
 `;
 
-export const ReportHeader = styled.div`
+export const ListTable = styled.div`
+  font-family: BBTreeGL;
+  font-size: 12px;
+  font-weight: normal;
+  margin-bottom: 12px;
+  color: #000000;
+  cursor: pointer;
+  padding: 0.2rem 4px;
+  margin: 0.3rem 0.3rem;
+
+  &:hover {
+    transition: 0.2s;
+    color: #5955d8;
+  }
+`;
+
+export const ReportBody = styled.div`
+  width: 100%;
+  height: 90%;
+  margin-top: 0.5rem;
+`;
+
+export const ReportMain = styled.div`
+  &:hover {
+    cursor: default;
+  }
+`;
+export const ReportTitle = styled.div`
   width: 100%;
   height: 100%;
 
@@ -156,10 +177,6 @@ export const ReportHeader = styled.div`
     font-weight: normal;
     font-size: 14px;
     text-align: left;
-
-    &:hover {
-      cursor: text;
-    }
   }
 `;
 
@@ -181,14 +198,6 @@ export const UseLang = styled.div`
     font-weight: normal;
     font-size: 14px;
     text-align: left;
-
-    &:hover {
-      cursor: text;
-    }
-  }
-
-  &:hover {
-    cursor: text;
   }
 `;
 
@@ -235,10 +244,6 @@ export const ReprotWriteBox = styled.div`
     font-family: BBTreeGL;
     font-size: 14px;
     text-align: left;
-
-    &:hover {
-      cursor: text;
-    }
   }
 `;
 
@@ -253,10 +258,6 @@ export const LinkBox = styled.div`
   span {
     width: 100%;
     height: 100%;
-
-    &:hover {
-      cursor: text;
-    }
   }
   span > div {
     display: flex;
@@ -266,10 +267,6 @@ export const LinkBox = styled.div`
     background: #f8f8f8;
     border: 1px solid #f8f8f8;
     padding: 0.4rem 0.4rem;
-
-    &:hover {
-      cursor: text;
-    }
   }
   div > img {
     width: 20px;
@@ -287,10 +284,6 @@ export const LinkBox = styled.div`
     margin-left: 0.4rem;
     font-family: BBTreeGL;
     font-size: 13px;
-
-    &:hover {
-      cursor: text;
-    }
   }
 `;
 
@@ -317,10 +310,6 @@ export const inAttachFile = styled.div`
   -webkit-user-select: none;
   user-select: none;
 
-  &:hover {
-    cursor: default;
-  }
-
   img {
     width: 20px;
     margin-right: 8px;
@@ -340,10 +329,6 @@ export const inAttachFile = styled.div`
     font-size: 13px;
     font-family: BBTreeGL;
     color: gray;
-
-    &:hover {
-      cursor: default;
-    }
   }
 `;
 
@@ -366,6 +351,39 @@ export const MakeTeam = styled.div`
     width: 100%;
     height: 100%;
     display: flex;
+  }
+`;
+
+export const MtFlexBox = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 15%;
+
+  &:hover {
+    cursor: default;
+  }
+`;
+
+export const MtBtn = styled.div`
+  text-align: center;
+  width: 5.7rem;
+  height: 24px;
+  margin-top: 6rem;
+  border: 1px solid #6192f3;
+  border-radius: 18px;
+  outline: none;
+  background: #6192f3;
+  transition: 0.3s;
+  padding: 0.3rem 1rem;
+  color: white;
+  font-family: BBTreeGL;
+  font-size: 13px;
+
+  &:hover {
+    cursor: pointer;
+    background: #719cf0;
+    transition: 0.3s;
   }
 `;
 
